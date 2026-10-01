@@ -237,15 +237,6 @@ class ActionBox:
 ##HOWEY = Player(50, 2)
 
 
-# Test Function
-def what_the_heck():
-    print("My")
-    pygame.time.wait(5000)
-    print("Name")
-    pygame.time.wait(5000)
-    print("IS")
-    pygame.time.wait(5000)
-    print("Jeff")
 
 
 # Movement Function
@@ -258,8 +249,6 @@ def handle_heart_movement(keys_pressed, battleBox, p1):
         p1.HEART_HITBOX.y -= p1.HEART_VEL
     if keys_pressed[pygame.K_s] and p1.HEART_HITBOX.y <= battleBox.bottom - 25:  # Down
         p1.HEART_HITBOX.y += p1.HEART_VEL
-    if keys_pressed[pygame.K_r]:
-        what_the_heck()
 
 
 goingDown = True
