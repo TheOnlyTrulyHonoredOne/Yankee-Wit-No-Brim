@@ -181,7 +181,6 @@ class MovementBox:
 
             else:
                 theText = font.render("Yankee with no brim!", True, WHITE, BLACK)
-            ## THE TEXT
 
 
             WIN.blit(theText, (120, 295))
@@ -211,30 +210,24 @@ class ActionBox:
         self.drawBOX(xLocation, yLocation, text)
 
     def drawBOX(self, xLocation, yLocation, text):
-        text = str(text)
-        numOfCharacters = len(text)
 
         if self.isActive:
             if self.name == "ACT":
-                surounding_box = pygame.draw.rect(WIN, yellow, (xLocation - 90, yLocation - 10, 170, 50),
+                pygame.draw.rect(WIN, yellow, (xLocation - 90, yLocation - 10, 170, 50),
                                                   3)  # WIN, Color, (X, Y, WIDTH, HEIGHT), 3 (for no fill)
             else:
-                surounding_box = pygame.draw.rect(WIN, yellow, (xLocation - 45, yLocation - 10, 170, 50),
+                pygame.draw.rect(WIN, yellow, (xLocation - 45, yLocation - 10, 170, 50),
                                                   3)  # WIN, Color, (X, Y, WIDTH, HEIGHT), 3 (for no fill)
         else:
 
             if self.name == "ACT":
-                surounding_box = pygame.draw.rect(WIN, orange, (xLocation - 90, yLocation - 10, 170, 50),
+                pygame.draw.rect(WIN, orange, (xLocation - 90, yLocation - 10, 170, 50),
                                                   3)  # WIN, Color, (X, Y, WIDTH, HEIGHT), 3 (for no fill)
             else:
-                surounding_box = pygame.draw.rect(WIN, orange, (xLocation - 45, yLocation - 10, 170, 50), 3)
+                pygame.draw.rect(WIN, orange, (xLocation - 45, yLocation - 10, 170, 50), 3)
 
     def setIsActive(self, boolean):
         self.isActive = boolean
-
-
-##p1 = Player(20, 1)
-##HOWEY = Player(50, 2)
 
 
 
@@ -326,7 +319,6 @@ def main():
 
     yankeeWithNoBrim = Player(100, 10, 10, 10)
 
-    ##while yankeeWithNoBrim.health >= 0:
 
     actionsTuple = ("FIGHT", "ACT", "ITEM", "MERCY")
 
