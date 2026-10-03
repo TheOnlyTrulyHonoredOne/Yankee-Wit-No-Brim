@@ -365,7 +365,7 @@ def main():
                     battleBox.seeActList = True
                     spaceDown = True
                     readyForFighting = True
-                    print("FIRE 1")
+                    print("You tell Yankee you enjoy his Brimless exterior")
 
 
                 if battleBox.inActMode and battleBox.willAct and battleBox.seeActList and not spaceDown and readyForFighting:
